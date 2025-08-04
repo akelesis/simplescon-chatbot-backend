@@ -15,15 +15,15 @@ export class IntegraContadorService {
     const url = 'https://autenticacao.sapi.serpro.gov.br/authenticate';
     const certPath = join(process.cwd(), 'src', 'certs', 'simplescon_cert.pfx');
     const certBuffer = readFileSync(certPath);
-    const certPassword = '123456';
+    const certPassword = '';
 
     const httpsAgent = new https.Agent({
       pfx: certBuffer,
       passphrase: certPassword,
     });
 
-    const key = '7d9lWdxTgEBUFz64aG0_gFmg2VMa';
-    const secret = 'dy4YsuUimzsCTQTUApCxbh0xUWsa';
+    const key = '';
+    const secret = '';
 
     const base64 = Buffer.from(`${key}:${secret}`).toString('base64');
     const headers = {
@@ -61,15 +61,15 @@ export class IntegraContadorService {
 
     const body = {
       contratante: {
-        numero: '54563262000193',
+        numero: '',
         tipo: 2,
       },
       autorPedidoDados: {
-        numero: '54563262000193',
+        numero: '',
         tipo: 2,
       },
       contribuinte: {
-        numero: '37558352000177',
+        numero: '',
         tipo: 2,
       },
       pedidoDados: {
